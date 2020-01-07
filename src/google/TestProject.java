@@ -76,7 +76,12 @@ public class TestProject extends HttpServlet
 //		    System.out.println("-----------------");
 		    num++;
 		}
+		
 		originalResult r=new originalResult(s);
+		if(!r.lst.contains(new Keyword(google.searchKeyword,20)))
+		{
+			r.lst.add(new Keyword(google.searchKeyword,20));
+		}
 		request.setAttribute("query", s);
 //		request.setAttribute("query", r.resultTrees);
 		request.getRequestDispatcher("googleitem.jsp").forward(request, response); 
