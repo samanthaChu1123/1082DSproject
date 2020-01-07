@@ -31,6 +31,33 @@ public class originalResult
 		lst.add(new Keyword("¦ñ¤âÂ§",2));
 		lst.add(new Keyword("Ã±ÃÒ",2));
 		lst.add(new Keyword("¶×²v",1));
+		lst.add(new Keyword("trip",5));
+		lst.add(new Keyword("travel",5));
+		lst.add(new Keyword("tour",5));
+		lst.add(new Keyword("journey",5));
+		lst.add(new Keyword("go traveling",4));
+		lst.add(new Keyword("group tour",4));
+		lst.add(new Keyword("travel with a group",4));
+		lst.add(new Keyword("independent travel",4));
+		lst.add(new Keyword("travel alone",4));
+		lst.add(new Keyword("air ticket",4));
+		lst.add(new Keyword("passenger ticket",4));
+		lst.add(new Keyword("ticket",4));
+		lst.add(new Keyword("booking",4));
+		lst.add(new Keyword("check in",2));
+		lst.add(new Keyword("accomodation",4));
+		lst.add(new Keyword("scenic spot",4));
+		lst.add(new Keyword("tourism",4));
+		lst.add(new Keyword("transportation",4));
+		lst.add(new Keyword("must buy",4));
+		lst.add(new Keyword("hotel",3));
+		lst.add(new Keyword("homestay",3));
+		lst.add(new Keyword("bnb",3));
+		lst.add(new Keyword("hostel",3));
+		lst.add(new Keyword("gift",2));
+		lst.add(new Keyword("souvenir",2));
+		lst.add(new Keyword("visa",2));
+		lst.add(new Keyword("exchange rate",1));
     }
 	
 	public void createEachTree(String[][] s)
