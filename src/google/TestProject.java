@@ -58,6 +58,10 @@ public class TestProject extends HttpServlet
 		    {
 		    	value=value.substring(7);
 		    }
+		    if(value.startsWith(" /url?q="))
+		    {
+		    	value=value.substring(8);
+		    }
 		    if(value.startsWith("/search")||value.startsWith("http://www.google.com/search"))
 		    {
 		    	continue;
@@ -77,15 +81,15 @@ public class TestProject extends HttpServlet
 		    num++;
 		}
 		
-		originalResult r=new originalResult(s);
-		if(!r.lst.contains(new Keyword(google.searchKeyword,20)))
-		{
-			r.lst.add(new Keyword(google.searchKeyword,20));
-		}
-		request.setAttribute("query", s);
-//		request.setAttribute("query", r.resultTrees);
-		request.getRequestDispatcher("googleitem.jsp").forward(request, response); 
+		originalResult r=new originalResult(s,google.searchKeyword);
 		
+//		for(Keyword k: r.lst)
+//		{
+//			System.out.println(k.name);
+//		}
+//		request.setAttribute("query", s);
+		request.setAttribute("query", r.resultTrees);
+		request.getRequestDispatcher("googleitem.jsp").forward(request, response); 
 	}
 
 	/**
