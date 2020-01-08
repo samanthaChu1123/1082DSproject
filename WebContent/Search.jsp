@@ -9,6 +9,7 @@
 		<form action='${requestUri}' method='get'>
 			<input type='text' name='keyword' placeholder = 'keyword'/>
 			<input type='submit' value='submit' />
+			
 		</form>
 	</body>
 </html>

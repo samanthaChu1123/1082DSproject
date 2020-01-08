@@ -58,11 +58,19 @@ public class WebNode
 	
 	public void findChildren() throws Exception
 	{		
-		if(getDepth()>3)
+		if(getDepth()>1)
 		{
 			return;
 		}
-		System.out.println("!!!!");
+		System.out.println("");
+		try
+		{
+			webPage.url = new String(webPage.url.getBytes(), "UTF-8"); 
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
 		String content = fetchContent(webPage.url);
 		Document doc = Jsoup.parse(content);
 		Elements lis = doc.select("div");

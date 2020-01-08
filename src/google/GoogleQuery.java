@@ -36,13 +36,9 @@ public class GoogleQuery
 	public String content;
 
 	public GoogleQuery(String searchKeyword)
-
 	{
-
 		this.searchKeyword = searchKeyword;
-
-		this.url = "http://www.google.com/search?q="+searchKeyword+"&oe=utf8&num=10";
-
+		this.url = "http://www.google.com.tw/search?q="+searchKeyword+"&oe=utf8&num=20";
 	}
 
 	

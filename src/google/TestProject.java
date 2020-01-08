@@ -61,12 +61,15 @@ public class TestProject extends HttpServlet
 		    if(value.startsWith(" /url?q="))
 		    {
 		    	value=value.substring(8);
-		    }
+		    }	
 		    if(value.startsWith("/search")||value.startsWith("http://www.google.com/search"))
 		    {
 		    	continue;
 		    }
-
+		    if(value.contains("javascript"))
+				continue;
+		    if(value.contains("wikipedia"))
+				continue;
 			if(value.contains("&sa=U")&&!value.startsWith("/search?"))
 				value=value.substring(0,value.lastIndexOf("&sa=U"));
 			if(value.contains(".php")&&!value.startsWith("/search?"))
